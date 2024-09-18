@@ -1,0 +1,13 @@
+<p>device works!</p>
+<div class="w3-container">
+    <h2>{{ title }}</h2>
+    <div class="w3-card-4" *ngFor="let section of deviceSections">
+      <header class="w3-container w3-blue">
+        <h3>{{ section.header }}</h3>
+      </header>
+      <div class="w3-container">
+        <p>{{ section.content }}</p>
+      </div>
+    </div>
+  </div>
+  
