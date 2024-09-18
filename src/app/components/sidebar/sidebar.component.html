@@ -1,8 +1,23 @@
-<div class="w3-sidebar w3-bar-block w3-light-grey" style="width:25%">
-    <a routerLink="/device" class="w3-bar-item w3-button">Device</a>
-    <a routerLink="/modules" class="w3-bar-item w3-button">Modules</a>
-    <a routerLink="/rs232" class="w3-bar-item w3-button">RS232</a>
-    <a routerLink="/rs485" class="w3-bar-item w3-button">RS485</a>
-    <!-- Add other menu items -->
-  </div>
+<!-- sidebar.component.html -->
+<nav class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width: 250px">
+    <div class="w3-container w3-blue">
+      <h3>Neo Gateway</h3>
+    </div>
+  
+    <a routerLink="/device" routerLinkActive="w3-blue" class="w3-bar-item w3-button">
+      <i class="zmdi zmdi-devices"></i> Device
+    </a>
+  
+    <a routerLink="/modules" routerLinkActive="w3-blue" class="w3-bar-item w3-button">
+      <i class="zmdi zmdi-settings"></i> Modules
+    </a>
+  
+    <a routerLink="/rs232" routerLinkActive="w3-blue" class="w3-bar-item w3-button">
+      <i class="zmdi zmdi-usb"></i> RS232
+    </a>
+  
+    <a routerLink="/cloud" routerLinkActive="w3-blue" class="w3-bar-item w3-button">
+      <i class="zmdi zmdi-cloud"></i> Cloud
+    </a>
+  </nav>
   

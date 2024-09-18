@@ -1,0 +1,48 @@
+/* sidebar.component.css */
+.w3-sidebar {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    overflow: auto;
+  }
+  
+  .w3-sidebar .w3-bar-item {
+    padding: 16px;
+    text-align: left;
+    font-size: 16px;
+  }
+  
+  .w3-sidebar .w3-bar-item:hover {
+    background-color: #ddd;
+  }
+  
+  .w3-container h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  
+  .w3-bar-item i {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+
+  /* Make the sidebar responsive for smaller screens */
+@media screen and (max-width: 600px) {
+    .w3-sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .w3-main {
+      margin-left: 0;
+    }
+  }
+
+  /* sidebar.component.css */
+.w3-bar-item.w3-blue {
+    background-color: #0b5394;
+    color: white;
+  }
+  
+  
