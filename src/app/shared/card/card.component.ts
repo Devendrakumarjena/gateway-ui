@@ -9,6 +9,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './card.component.scss'
 })
 export class CardComponent {
-  @Input() title: string = '';  
-  @Input() content: string[] = []; 
+  @Input()
+  title!: string;
+  @Input() data: any;
 }
