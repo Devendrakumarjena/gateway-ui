@@ -11,10 +11,11 @@ export const routes: Routes = [
   { path: 'can', component: CANComponent },
   { path: 'cloud', component: CloudComponent },
   { path: 'RS232', component: RS232Component },
-  { path: 'modules', component: ModulesComponent },
-  { path: 'modules', component: ModulesComponent },
-  { path: 'modules', component: ModulesComponent },
-  { path: 'rs232', component: ModulesComponent },
+  // { path: 'modules', component: ModulesComponent },
+  // { path: 'modules', component: ModulesComponent },
+  // { path: 'modules', component: ModulesComponent },
+  // { path: 'modules', component: ModulesComponent },
+  // { path: 'rs232', component: ModulesComponent },
   { path: '', redirectTo: '/device', pathMatch: 'full' }, // Default route
   { path: '**', redirectTo: '/device' },
 ];

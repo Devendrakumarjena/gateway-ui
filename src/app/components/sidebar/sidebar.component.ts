@@ -18,19 +18,41 @@ export class SidebarComponent {
       open: false, 
       submenu: [
         { path: '/rs232', label: 'RS232' },
-        { path: '/rs485', label: 'RS485' }
+        { path: '/rs485', label: 'RS485' },
+        { path: '/can', label: 'CAN' }, //change
+        { path: '/io', label: 'IO' } //change
       ]
     },
-    { path: '/can', label: 'CAN' },
+    // { path: '/can', label: 'CAN' },
     {
-      label: 'Wireless',
+      label: 'Wireless', 
       open: false, 
       submenu: [
         { path: '/wifi', label: 'Wi-Fi' },
         { path: '/bluetooth', label: 'Bluetooth' }
       ]
     },
-    { path: '/io', label: 'IO' }
+    {
+      label: 'Cloud', //change
+      open: false, 
+      submenu: [
+        { path: '/Hardware', label: 'Hardware' }
+      ]
+    },
+    {
+      label: 'Setting', //change
+      open: false, 
+      submenu: [
+        { path: '/Interface', label: 'Interface' },
+        { path: '/wireless', label: 'wireless' }
+      ]
+    },
+    { path: '#', label: 'Log' }, //change
+    { path: '#', label: 'Backup' }, //change
+    { path: '#', label: 'Update' }, //change
+    { path: '#', label: 'Reset' }, //change
+    { path: '#', label: 'About' }, //change
+    { path: '#', label: 'Logout' }, //change
   ];
 
   // Toggle submenu visibility

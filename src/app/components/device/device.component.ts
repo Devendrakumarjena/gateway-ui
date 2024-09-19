@@ -27,13 +27,13 @@ export class DeviceComponent {
     { 
       title: 'Memory', 
       content: 'Flash: 31080/60120 Bytes\nHeap: 5440/102040 Bytes', 
-      status: 'configured', 
+      status: 'connected', 
       details: 'File System: 24435/98356 Bytes' 
     },
     { 
       title: 'Memory', 
       content: 'Flash: 31080/60120 Bytes\nHeap: 5440/102040 Bytes', 
-      status: 'configured', 
+      status: 'disconnected', 
       details: 'File System: 24435/98356 Bytes' 
     },
     { 
