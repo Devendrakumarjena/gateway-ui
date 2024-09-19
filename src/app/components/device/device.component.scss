@@ -1,53 +1,32 @@
-/* device.component.css */
-.device-container {
-    padding: 20px;
-  }
-  
-  .device-title {
-    font-size: 2em;
-    color: #0b5394;
-  }
-  
-  .packaging-info {
-    margin: 20px 0;
-    font-size: 1.2em;
-  }
-  
-  .device-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-  
-  .device-card {
-    background-color: #f1f1f1;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .device-card h3 {
-    margin-top: 0;
-    color: #333;
-  }
-  
-  .device-card p {
-    margin: 5px 0;
-  }
-  
-  .device-card strong {
-    color: #333;
-  }
-  
-  .w3-blue {
-    color: white;
-    background-color: #2196f3;
-  }
-  
-  /* Customize the card headers and colors */
-  .device-card h3 {
-    background-color: #e7e7e7;
-    padding: 10px;
-    margin-bottom: 15px;
-  }
-  
+.container {
+  display: flex;
+  flex-direction: column;  /* Ensure items are displayed in a column */
+  align-items: stretch;    /* Ensure each item takes up the full width */
+  gap: 15px;               /* Add space between the cards */
+  padding: 10px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-content {
+  font-size: 14px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Display cards in a column */
+  gap: 15px; /* Space between the cards */
+  padding: 10px;
+}
