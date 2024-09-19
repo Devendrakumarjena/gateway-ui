@@ -47,7 +47,7 @@ export class SidebarComponent {
         { path: '/wireless', label: 'wireless' }
       ]
     },
-    { path: '#', label: 'Log' }, //change
+    { path: '#', label: 'Logs' }, //change
     { path: '#', label: 'Backup' }, //change
     { path: '#', label: 'Update' }, //change
     { path: '#', label: 'Reset' }, //change

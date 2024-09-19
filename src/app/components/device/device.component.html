@@ -1,6 +1,13 @@
 <div class="device-container">
-  <h1>Device</h1>
-  <p>Here you can find some information about your device status.</p>
+  <header class="w3-container w3-blue w3-margin-bottom  w3-margin-right">
+    <h1>Device</h1>
+  </header>
+  
+  <p style="left: 12px; position: relative;">Here you can find some information about your device status.</p>
+ <div class="w3-panel w3-border w3-leftbar w3-border-black">
+    <p> Neo - Packaging Solutions : v0.43.1</p>
+  </div>
+
   <div class="w3-row-padding w3-margin">
     <div class="w3-col l4 m6 s12" *ngFor="let card of cardsData" style="padding: 10px;">
       <app-card [data]="card"></app-card>
