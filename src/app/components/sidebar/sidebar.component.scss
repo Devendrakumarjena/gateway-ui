@@ -26,6 +26,12 @@
     margin-right: 10px;
     font-size: 20px;
   }
+  
+  //biswaranjan change the border color
+  .w3-button
+  {
+    border: solid #000 1px;
+  }
 
   /* Make the sidebar responsive for smaller screens */
 @media screen and (max-width: 600px) {
@@ -41,8 +47,9 @@
 
   /* sidebar.component.css */
 .w3-bar-item.w3-blue {
-    background-color: #0b5394;
+    background-color: #2196f3;
     color: white;
   }
   
   
+ 
