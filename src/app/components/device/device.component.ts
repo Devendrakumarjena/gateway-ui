@@ -11,13 +11,39 @@ import { CommonModule } from '@angular/common';
 })
 export class DeviceComponent {
   title = 'Device Information';
-  deviceCards = [
-    { title: 'SYSTEM', data: ['Chip ID: a2e491', 'CPU Frequency: 160Mhz', 'CPU Temperature: 34°C'] },
-    { title: 'MEMORY', data: ['Flash: 31080 / 60120 Bytes', 'Heap: 5400 / 102040 Bytes'] },
-    { title: 'WIRED', data: ['Hostname: Neo-a2e491', 'IP Address: 192.168.1.21 [DHCP]'] },
-    { title: 'WI-FI (Access Point)', data: ['SSID: Neo-a2e491', 'Clients: 0', 'Standard: 802.11bgn'] },
-    { title: 'MODEM', data: ['Carrier: Jio4G', 'State: Searching', 'SIM Card: Not Inserted'] },
-    { title: 'BLUETOOTH', data: ['Mode: BLE', 'UUID: c4185585-45dc'] }
+  cardsData = [
+    { 
+      title: 'System', 
+      content: 'Chip ID: a2e491\nCPU Frequency: 160Mhz\nCPU Temperature: 34°C', 
+      status: 'active', 
+      details: 'Uptime: 0 days, 0 hours, 54 mins, 39 secs' 
+    },
+    { 
+      title: 'Memory', 
+      content: 'Flash: 31080/60120 Bytes\nHeap: 5440/102040 Bytes', 
+      status: 'configured', 
+      details: 'File System: 24435/98356 Bytes' 
+    },
+    { 
+      title: 'Memory', 
+      content: 'Flash: 31080/60120 Bytes\nHeap: 5440/102040 Bytes', 
+      status: 'configured', 
+      details: 'File System: 24435/98356 Bytes' 
+    },
+    { 
+      title: 'Memory', 
+      content: 'Flash: 31080/60120 Bytes\nHeap: 5440/102040 Bytes', 
+      status: 'configured', 
+      details: 'File System: 24435/98356 Bytes' 
+    },
+    { 
+      title: 'Memory', 
+      content: 'Flash: 31080/60120 Bytes\nHeap: 5440/102040 Bytes', 
+      status: 'configured', 
+      details: 'File System: 24435/98356 Bytes' 
+    },
   ];
+  
+  
   
 }

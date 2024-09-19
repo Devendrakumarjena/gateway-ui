@@ -2,8 +2,8 @@
   <h1>Device</h1>
   <p>Here you can find some information about your device status.</p>
   <div class="w3-row-padding w3-margin">
-    <div class="w3-col l4 m6 s12" *ngFor="let card of deviceCards">
-      <app-card [title]="card.title" [data]="card.data"></app-card>
+    <div class="w3-col l4 m6 s12" *ngFor="let card of cardsData" style="padding: 10px;">
+      <app-card [data]="card"></app-card>
     </div>
   </div>
 </div>

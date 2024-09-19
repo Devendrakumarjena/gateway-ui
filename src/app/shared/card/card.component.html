@@ -1,5 +1,10 @@
-<div class="w3-card w3-margin w3-padding w3-white">
-    <h3 class="w3-text-blue">{{ title }}</h3>
-    <p *ngFor="let item of data">{{ item }}</p>
+<div class="card">
+  <div class="card-header">
+    <h3>{{ data.title }}</h3>
+    <button class="status-button" [ngClass]="getStatusClass(data.status)">
+      {{ data.status }}
+    </button>
   </div>
-  
+  <p class="card-content">{{ data.content }}</p>
+  <div class="status-details">{{ data.details }}</div>
+</div>
