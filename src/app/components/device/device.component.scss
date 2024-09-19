@@ -1,0 +1,15 @@
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  background-color: white;
+  height: 300px; /* Adjust height as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

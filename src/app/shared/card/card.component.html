@@ -1,0 +1,10 @@
+<div class="card">
+  <div class="card-header">
+    <h3>{{ data.title }}</h3>
+    <button class="status-button" [ngClass]="getStatusClass(data.status)">
+      {{ data.status }}
+    </button>
+  </div>
+  <p class="card-content">{{ data.content }}</p>
+  <div class="status-details">{{ data.details }}</div>
+</div>

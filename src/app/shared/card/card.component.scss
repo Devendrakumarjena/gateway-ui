@@ -1,0 +1,53 @@
+.card {
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 16px;
+  background-color: white;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px; /* Header font size set to 14px */
+  font-weight: bold; /* Optionally, you can make it bold */
+}
+
+.card-content {
+  font-size: 12px; /* Content font size set to 12px */
+}
+
+.status-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 8px;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: default;
+}
+
+.status-active {
+  background-color: green;
+}
+
+.status-configured {
+  background-color: blue;
+}
+
+.status-connected {
+  background-color: orange;
+}
+
+.status-disconnected {
+  background-color: red;
+}
+
+  
+  
