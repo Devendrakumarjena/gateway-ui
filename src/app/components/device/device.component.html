@@ -1,67 +1,9 @@
-<!-- device.component.html -->
 <div class="device-container">
-  <h1 class="device-title">Device</h1>
+  <h1>Device</h1>
   <p>Here you can find some information about your device status.</p>
-
-  <!-- Packaging Solutions Version -->
-  <div class="packaging-info">
-    <i class="zmdi zmdi-device"></i>
-    <span>Neo - Packaging Solutions : <strong>v0.43.1</strong></span>
-  </div>
-
-  <!-- Device Information Cards -->
-  <div class="device-cards">
-
-    <!-- System Card -->
-    <div class="device-card">
-      <h3>SYSTEM</h3>
-      <p>Chip ID: a2e491</p>
-      <p>CPU Frequency: 160Mhz</p>
-      <p>CPU Temperature: 34°C</p>
-      <p>Serial Number: 985d4cd8e0d84</p>
-      <p>Efuse: 985d4cd8e0d84</p>
-      <p>Uptime: 0 days, 0 hours, 54 mins, 39 secs</p>
+  <div class="w3-row-padding w3-margin">
+    <div class="w3-col l4 m6 s12" *ngFor="let card of deviceCards">
+      <app-card [title]="card.title" [data]="card.data"></app-card>
     </div>
-
-    <!-- Memory Card -->
-    <div class="device-card">
-      <h3>MEMORY</h3>
-      <p>Flash: 31MB / 60MB</p>
-      <p>Heap: 54MB / 102MB</p>
-      <p>File System: 24MB / 98MB</p>
-    </div>
-
-    <!-- Provisioning Card -->
-    <div class="device-card">
-      <h3>PROVISIONING</h3>
-      <p>Device ID: Neo-a2e491</p>
-      <p>Organization Code: ABC-001</p>
-      <p>Server: Neo Server</p>
-      <p>Host: 34.47.158.159:8883</p>
-      <p>Snapshot: default.com</p>
-      <p>Provisioned At: 2024-09-14 12:32:11</p>
-    </div>
-
-    <!-- Wired Card -->
-    <div class="device-card">
-      <h3>WIRED</h3>
-      <p>Hostname: Neo-a2e491</p>
-      <p>IP Address: 192.168.1.21 [DHCP]</p>
-      <p>Gateway: 192.168.1.1</p>
-      <p>Internet Access: Not Connected</p>
-      <p>MAC Address: 84:0d:8e:cd:54:98</p>
-    </div>
-
-    <!-- Wi-Fi Access Point Card -->
-    <div class="device-card">
-      <h3>WI-FI (Access Point)</h3>
-      <p>SSID: Neo-a2e491</p>
-      <p>Password: *********</p>
-      <p>Clients: 0</p>
-      <p>Standard: 802.11bgn</p>
-      <p>MAC Address: 84:0d:8e:cd:54:98</p>
-    </div>
-
-    <!-- Add more cards as needed -->
   </div>
 </div>
