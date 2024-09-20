@@ -43,16 +43,16 @@ export class SidebarComponent {
       label: 'Setting', 
       open: false, 
       submenu: [
-        { path: '/Interface', label: 'Interface', icon: 'zmdi zmdi-settings' },
-        { path: '/wireless', label: 'Wireless', icon: 'zmdi zmdi-wifi-alt' }
+        { path: '/Interface', label: 'Interface', icon: 'zmdi zmdi-memory zmdi-hc-lg' },
+        { path: '/wireless', label: 'Wireless', icon: 'zmdi zmdi-wifi-alt zmdi-hc-lg' }
       ]
     },
-    { path: '#', label: 'Log', icon: 'zmdi zmdi-file-text' },
-    { path: '#', label: 'Backup', icon: 'zmdi zmdi-storage' },
-    { path: '#', label: 'Update', icon: 'zmdi zmdi-refresh-alt' },
-    { path: '#', label: 'Reset', icon: 'zmdi zmdi-rotate-left' },
-    { path: '#', label: 'About', icon: 'zmdi zmdi-info-outline' },
-    { path: '#', label: 'Logout', icon: 'zmdi zmdi-power' }
+    { path: '#', label: 'Log', icon: 'zmdi zmdi-view-headline zmdi-hc-lg' },
+    { path: '#', label: 'Backup', icon: 'zmdi zmdi-folder-outline zmdi-hc-lg' },
+    { path: '#', label: 'Update', icon: 'zmdi zmdi-present-to-all zmdi-hc-lg' },
+    { path: '#', label: 'Reset', icon: 'zmdi zmdi-refresh-sync zmdi-hc-lg' },
+    { path: '#', label: 'About', icon: 'zmdi zmdi-assignment-o zmdi-hc-lg' },
+    { path: '#', label: 'Logout', icon: 'zmdi zmdi-mail-reply-all zmdi-hc-lg' }
   ];
   toggleSubmenu(item: any) {
     item.open = !item.open;
