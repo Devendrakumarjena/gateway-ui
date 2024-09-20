@@ -12,7 +12,8 @@ import { RouterOutlet,RouterLink ,RouterLinkActive } from '@angular/router';
 export class SidebarComponent {
 
   menuItems = [
-    { path: '/device', label: 'Device', icon: 'zmdi zmdi-devices' }, // Use a relevant Material Design Iconic Font class
+    { path: '/device', label: 'Device', icon: 'zmdi zmdi-developer-board zmdi-hc-lg' }, 
+    { path: '/application', label: 'Application', icon: 'zmdi zmdi-airplay zmdi-hc-lg' },
     {
       label: 'Modules', 
       open: false, 
