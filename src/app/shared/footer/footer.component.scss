@@ -1,8 +1,6 @@
 .footer {
     background-color: #0084e0; /* Same blue as the header */
     color: white;
-    text-align: center;
-    padding: 10px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -12,5 +10,6 @@
   .footer p {
     margin: 0;
     font-size: 14px;
+    margin-left: 10px;
   }
   

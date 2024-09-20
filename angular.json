@@ -33,7 +33,9 @@
             ],
             "styles": [
               "src/styles.scss",
-              "https://www.w3schools.com/w3css/4/w3.css"
+              "https://www.w3schools.com/w3css/4/w3.css",
+              "./src/app/shared/material-design-iconic-font/css/material-design-iconic-font.min.css"
+
             ],
             "scripts": [],
             "server": "src/main.server.ts",
