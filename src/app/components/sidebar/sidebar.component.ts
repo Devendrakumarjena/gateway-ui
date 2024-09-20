@@ -12,50 +12,47 @@ import { RouterOutlet,RouterLink ,RouterLinkActive } from '@angular/router';
 export class SidebarComponent {
 
   menuItems = [
-    { path: '/device', label: 'Device' },
+    { path: '/device', label: 'Device', icon: 'zmdi zmdi-devices' }, // Use a relevant Material Design Iconic Font class
     {
       label: 'Modules', 
       open: false, 
       submenu: [
-        { path: '/rs232', label: 'RS232' },
-        { path: '/rs485', label: 'RS485' },
-        { path: '/can', label: 'CAN' }, //change
-        { path: '/io', label: 'IO' } //change
+        { path: '/rs232', label: 'RS232', icon: 'zmdi zmdi-serial' },  // Add icons for submenu
+        { path: '/rs485', label: 'RS485', icon: 'zmdi zmdi-ethernet' },
+        { path: '/can', label: 'CAN', icon: 'zmdi zmdi-car' },
+        { path: '/io', label: 'IO', icon: 'zmdi zmdi-input-antenna' }
       ]
     },
-    // { path: '/can', label: 'CAN' },
     {
       label: 'Wireless', 
       open: false, 
       submenu: [
-        { path: '/wifi', label: 'Wi-Fi' },
-        { path: '/bluetooth', label: 'Bluetooth' }
+        { path: '/wifi', label: 'Wi-Fi', icon: 'zmdi zmdi-wifi' },
+        { path: '/bluetooth', label: 'Bluetooth', icon: 'zmdi zmdi-bluetooth' }
       ]
     },
     {
-      label: 'Cloud', //change
+      label: 'Cloud', 
       open: false, 
       submenu: [
-        { path: '/Hardware', label: 'Hardware' }
+        { path: '/Hardware', label: 'Hardware', icon: 'zmdi zmdi-cloud' }
       ]
     },
     {
-      label: 'Setting', //change
+      label: 'Setting', 
       open: false, 
       submenu: [
-        { path: '/Interface', label: 'Interface' },
-        { path: '/wireless', label: 'wireless' }
+        { path: '/Interface', label: 'Interface', icon: 'zmdi zmdi-settings' },
+        { path: '/wireless', label: 'Wireless', icon: 'zmdi zmdi-wifi-alt' }
       ]
     },
-    { path: '#', label: 'Log' }, //change
-    { path: '#', label: 'Backup' }, //change
-    { path: '#', label: 'Update' }, //change
-    { path: '#', label: 'Reset' }, //change
-    { path: '#', label: 'About' }, //change
-    { path: '#', label: 'Logout' }, //change
+    { path: '#', label: 'Log', icon: 'zmdi zmdi-file-text' },
+    { path: '#', label: 'Backup', icon: 'zmdi zmdi-storage' },
+    { path: '#', label: 'Update', icon: 'zmdi zmdi-refresh-alt' },
+    { path: '#', label: 'Reset', icon: 'zmdi zmdi-rotate-left' },
+    { path: '#', label: 'About', icon: 'zmdi zmdi-info-outline' },
+    { path: '#', label: 'Logout', icon: 'zmdi zmdi-power' }
   ];
-
-  // Toggle submenu visibility
   toggleSubmenu(item: any) {
     item.open = !item.open;
   }

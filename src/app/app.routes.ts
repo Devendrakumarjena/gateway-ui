@@ -7,7 +7,7 @@ import { RS232Component } from './components/rs232/rs232.component';
 
 export const routes: Routes = [
   { path: 'device', component: DeviceComponent },
-  { path: 'modules', component: ModulesComponent },
+  { path: 'rs232', component: ModulesComponent },
   { path: 'can', component: CANComponent },
   { path: 'cloud', component: CloudComponent },
   { path: 'RS232', component: RS232Component },
