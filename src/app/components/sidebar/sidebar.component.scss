@@ -1,24 +1,12 @@
-/* Example CSS adjustments */
 .w3-sidebar {
   position: fixed;
   top: 0;
   bottom: 0;
   overflow: auto;
 }
-
-// .w3-main {
-//   margin-left: 210px;
-//   padding: 20px;
-// }
-
 .w3-sidebar button {
   font-weight: bold;
 }
-
-// .w3-sidebar a {
-//   padding-left: 30px; /* Indent submenu items */
-// }
-
 .w3-button .fa-caret-down {
   float: right;
 }
