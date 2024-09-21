@@ -1,30 +1,34 @@
-<div class="w3-sidebar w3-bar-block w3-light-grey w3-padding" style="width: 200px; position: fixed;">
-  <h3 class="w3-bar-item" style="font-size: 20px;">Neo Gateway</h3>
-
-  <!-- Loop through menu items -->
+<div
+  class="w3-sidebar w3-bar-block w3-light-grey"
+  style="width: 200px; position: fixed"
+>
+  <h3 class="w3-bar-item" style="font-size: 20px">Neo Gateway</h3>
   <div *ngFor="let item of menuItems">
-    <!-- If no submenu, display as a simple link -->
-    <a *ngIf="!item.submenu" 
-       class="w3-bar-item w3-button w3-padding-16 w3-margin-bottom" 
-       [routerLink]="item.path" 
-       routerLinkActive="w3-blue">
+    <a
+      *ngIf="!item.submenu"
+      class="w3-bar-item w3-button w3-margin-bottom"
+      [routerLink]="item.path"
+      routerLinkActive="w3-blue"
+    >
+      <i *ngIf="item.icon" class="{{ item.icon }}"></i>
       {{ item.label }}
     </a>
-
-    <!-- If there's a submenu, create a collapsible section -->
     <div *ngIf="item.submenu" class="w3-bar-block">
-      <button class="w3-button w3-block w3-left-align w3-margin-bottom" 
-              (click)="toggleSubmenu(item)">
-        {{ item.label }} 
-        <i class="fa fa-caret-down"></i>
+      <button
+        class="w3-button w3-block w3-left-align w3-margin-bottom"
+        (click)="toggleSubmenu(item)"
+      >
+        {{ item.label }}
+        <i class="zmdi zmdi-caret-down"></i>
       </button>
-
-      <!-- Submenu -->
       <div *ngIf="item.open" class="w3-hide w3-show">
-        <a *ngFor="let sub of item.submenu"
-           class="w3-bar-item w3-button w3-padding-16 w3-margin-bottom"
-           [routerLink]="sub.path"
-           routerLinkActive="w3-blue">
+        <a
+          *ngFor="let sub of item.submenu"
+          class="w3-bar-item w3-button w3-margin-bottom"
+          [routerLink]="sub.path"
+          routerLinkActive="w3-blue"
+        >
+          <i *ngIf="sub.icon" class="{{ sub.icon }}"></i>
           {{ sub.label }}
         </a>
       </div>
