@@ -1,12 +1,12 @@
 <div
-  class="w3-sidebar w3-bar-block w3-light-grey"
+  class="w3-sidebar w3-bar-block  w3-border-bottom"
   style="width: 200px; position: fixed"
 >
-  <h3 class="w3-bar-item" style="font-size: 20px">Neo Gateway</h3>
+  <h3 class="w3-bar-item w3-border-bottom" style="font-size: 20px">Neo Gateway</h3>
   <div *ngFor="let item of menuItems">
     <a
       *ngIf="!item.submenu"
-      class="w3-bar-item w3-button w3-margin-bottom"
+      class="w3-bar-item w3-button w3-margin-bottom w3-border-bottom"
       [routerLink]="item.path"
       routerLinkActive="w3-blue"
     >
@@ -15,7 +15,7 @@
     </a>
     <div *ngIf="item.submenu" class="w3-bar-block">
       <button
-        class="w3-button w3-block w3-left-align w3-margin-bottom"
+        class="w3-button w3-block w3-left-align w3-margin-bottom w3-border-bottom"
         (click)="toggleSubmenu(item)"
       >
         {{ item.label }}
