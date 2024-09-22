@@ -1,4 +1,4 @@
-<div class="w3-card">
+<!-- <div class="w3-card">
   <div class="w3-container">
     <div class="w3-bar">
       <p class=" w3-left">{{ data.title }}</p>
@@ -8,5 +8,20 @@
     <p class="card-content">{{ data.content }}</p>
     <div class="status-details">{{ data.details }}</div>
   </div>
+</div> -->
+
+<div class="w3-panel w3-border w3-round-large">
+  <div style="display: flex;justify-content:space-between;justify-items: center; padding: 10px;">
+    <p class="w3-medium"  >{{ data.title }}</p>
+
+    <button class="w3-button w3-padding-small" style="font-weight: bold;color: #f7f0f0;" [ngClass]="getStatusClass(data.status)">{{ data.status }}</button>
+  </div>
+  
+  <hr>
+  <p>Chip ID : a2e491</p>
+  <p>Chip ID : a2e491</p>
+  <p>Chip ID : a2e491</p>
+  <p>Chip ID : a2e491</p>
+  <p>Chip ID : a2e491</p>
 </div>
 
