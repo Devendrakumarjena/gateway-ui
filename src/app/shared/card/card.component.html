@@ -1,4 +1,4 @@
-<div class="w3-card w3-margin w3-padding w3-border w3-round" 
+<div class="w3-card w3-margin w3-padding w3-border w3-round w3-round-large" 
     [ngClass]="{
         'w3-border-red': status === 'inactive', 
         'w3-border-green': status === 'active', 
@@ -6,7 +6,7 @@
     }" style="font-size: 12px;">
     
     <h3 class="w3-text-blue">{{ title }} 
-        <span class="w3-tag w3-round w3-right" 
+        <span class="w3-tag w3-round w3-right"  style="font-size: 14px;"
               [ngClass]="{
                 'w3-green': status === 'active', 
                 'w3-red': status === 'inactive', 
