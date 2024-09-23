@@ -18,8 +18,8 @@ export class SidebarComponent {
       label: 'Modules', 
       open: false, 
       submenu: [
-        { path: '/rs232', label: 'RS232', icon: 'zmdi zmdi-serial' },  // Add icons for submenu
-        { path: '/rs485', label: 'RS485', icon: 'zmdi zmdi-ethernet' },
+        { path: '/rs232', label: 'RS232', icon: 'zmdi zmdi-reader' },  // Add icons for submenu
+        { path: '/rs485', label: 'RS485', icon: 'zmdi zmdi-device-hub' },
         { path: '/can', label: 'CAN', icon: 'zmdi zmdi-car' },
         { path: '/io', label: 'IO', icon: 'zmdi zmdi-input-antenna' },
         { path: '/cloud', label: 'Cloud', icon: 'zmdi zmdi-input-antenna' }
