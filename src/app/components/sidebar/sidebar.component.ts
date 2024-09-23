@@ -21,24 +21,25 @@ export class SidebarComponent {
         { path: '/rs232', label: 'RS232', icon: 'zmdi zmdi-serial' },  // Add icons for submenu
         { path: '/rs485', label: 'RS485', icon: 'zmdi zmdi-ethernet' },
         { path: '/can', label: 'CAN', icon: 'zmdi zmdi-car' },
-        { path: '/io', label: 'IO', icon: 'zmdi zmdi-input-antenna' }
+        { path: '/io', label: 'IO', icon: 'zmdi zmdi-input-antenna' },
+        { path: '/cloud', label: 'Cloud', icon: 'zmdi zmdi-input-antenna' }
       ]
     },
-    {
-      label: 'Wireless', 
-      open: false, 
-      submenu: [
-        { path: '/wifi', label: 'Wi-Fi', icon: 'zmdi zmdi-wifi' },
-        { path: '/bluetooth', label: 'Bluetooth', icon: 'zmdi zmdi-bluetooth' }
-      ]
-    },
-    {
-      label: 'Cloud', 
-      open: false, 
-      submenu: [
-        { path: '/Hardware', label: 'Hardware', icon: 'zmdi zmdi-cloud' }
-      ]
-    },
+    // {
+    //   label: 'Wireless', 
+    //   open: false, 
+    //   submenu: [
+    //     { path: '/wifi', label: 'Wi-Fi', icon: 'zmdi zmdi-wifi' },
+    //     { path: '/bluetooth', label: 'Bluetooth', icon: 'zmdi zmdi-bluetooth' }
+    //   ]
+    // },
+    // {
+    //   label: 'Cloud', 
+    //   open: false, 
+    //   submenu: [
+    //     { path: '/Hardware', label: 'Hardware', icon: 'zmdi zmdi-cloud' }
+    //   ]
+    // },
     {
       label: 'Setting', 
       open: false, 

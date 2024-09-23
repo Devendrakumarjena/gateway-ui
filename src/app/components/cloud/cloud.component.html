@@ -1,1 +1,170 @@
-<p>cloud works!</p>
+<div class="w3-container w3-margin">
+  <div class="w3-blue w3-padding">
+    <h2 class="w3-text-white">CLOUD</h2>
+  </div>
+  <div class="w3-card w3-padding w3-margin-top">
+    <h3 class="w3-text-blue">WAN Settings:</h3>
+    <div class="w3-row-padding">
+      <div class="w3-half input-container">
+        <label class="w3-label">Primary Interface:</label>
+        <div class="w3-padding-16">
+          <select
+            class="w3-select w3-border w3-border"
+            name="primary-interface"
+          >
+            <option value="Modem">Modem</option>
+          </select>
+        </div>
+      </div>
+      <div class="w3-half input-container">
+        <label class="w3-label">Secondary Interface:</label>
+        <div class="w3-padding-16">
+          <select
+            class="w3-select w3-border w3-border"
+            name="secondary-interface"
+          >
+            <option value="WiFi (2.4Ghz)">WiFi (2.4Ghz)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w3-card w3-padding w3-margin-top">
+    <h3 class="w3-text-blue">MQTT Settings:</h3>
+    <div class="w3-row-padding">
+      <div class="w3-half">
+        <h4>Primary Server:</h4>
+        <div class="input-container">
+          <label class="w3-label">Host:</label>
+          <input
+            class="w3-input w3-border w3-border"
+            type="text"
+            value="test.mosquitto.org"
+          />
+        </div>
+        <div class="input-container">
+          <label class="w3-label">Port:</label>
+          <input
+            class="w3-input w3-border w3-border"
+            type="number"
+            value="8883"
+          />
+        </div>
+        <div class="input-container">
+          <label class="w3-label">Authentication:</label>
+          <select class="w3-select w3-border w3-border">
+            <option value="Username">Username</option>
+          </select>
+        </div>
+        <div class="input-container">
+          <label class="w3-label">Username:</label>
+          <input
+            class="w3-input w3-border w3-border"
+            type="text"
+            value="User01"
+          />
+        </div>
+        <div class="input-container">
+          <label class="w3-label">Password:</label>
+          <input
+            class="w3-input w3-border w3-border"
+            type="password"
+            value="User@123"
+          />
+        </div>
+        <div class="input-container">
+          <label class="w3-label">Client Id:</label>
+          <input
+            class="w3-input w3-border w3-border"
+            type="text"
+            value="Neo-A21"
+          />
+        </div>
+        <div class="checkbox-container">
+          <label for="tls-primary">TLS/SSL:</label>
+          <input class="w3-check" id="tls-primary" type="checkbox" checked />
+        </div>
+      </div>
+      <div class="w3-half">
+        <h4>Secondary Server:</h4>
+        <div class="input-container">
+          <label class="w3-label">Host:</label>
+          <input
+            class="w3-input w3-border w3-border w3-border"
+            type="text"
+            value="test.mosquitto.org"
+          />
+        </div>
+        <div class="input-container">
+          <label class="w3-label">Port:</label>
+          <input
+            class="w3-input w3-border w3-border w3-border"
+            type="number"
+            value="8883"
+          />
+        </div>
+        <div class="input-container">
+          <label class="w3-label">Authentication:</label>
+          <select class="w3-select w3-border">
+            <option value="Username">Username</option>
+          </select>
+        </div>
+        <div class="input-container">
+          <label class="w3-label">Username:</label>
+          <input
+            class="w3-input w3-border w3-border w3-border"
+            type="text"
+            value="User01"
+          />
+        </div>
+        <div class="input-container">
+          <label class="w3-label">Password:</label>
+          <input
+            class="w3-input w3-border w3-border w3-border"
+            type="password"
+            value="User@123"
+          />
+        </div>
+        <div class="input-container">
+          <label class="w3-label">Client Id:</label>
+          <input
+            class="w3-input w3-border w3-border w3-border"
+            type="text"
+            value="Neo-A21"
+          />
+        </div>
+        <div class="checkbox-container">
+          <label for="tls-secondary">TLS/SSL:</label>
+          <input class="w3-check" id="tls-secondary" type="checkbox" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w3-card w3-padding w3-margin-top">
+    <h3 class="w3-text-blue">Record Details:</h3>
+    <div class="w3-row-padding">
+      <div class="w3-third input-container">
+        <label class="w3-label">Connection:</label>
+        <span class="w3-tag w3-green">Connected</span>
+      </div>
+      <div class="w3-third input-container">
+        <label class="w3-label">Records Sent:</label>
+        <span>0</span>
+      </div>
+      <div class="w3-third input-container">
+        <label class="w3-label">Records In Queue:</label>
+        <span>10</span>
+      </div>
+    </div>
+    <div class="w3-row-padding w3-margin-top">
+      <div class="w3-third input-container">
+        <label class="w3-label">Sent Record Index:</label>
+        <span>0</span>
+      </div>
+      <div class="w3-third input-container">
+        <label class="w3-label">Last Record Sent:</label>
+        <span>1970/01/01 00:00:00</span>
+      </div>
+    </div>
+  </div>
+</div>

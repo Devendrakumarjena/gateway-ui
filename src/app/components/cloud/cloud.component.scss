@@ -1,0 +1,23 @@
+.w3-row-padding .w3-half, .w3-row-padding .w3-third {
+    padding: 0 8px;
+  }
+  .input-container {
+    margin-bottom: 16px;
+  }
+  .w3-label {
+    display: inline-block;
+    margin-right: 10px;
+    width: 40%;
+  }
+  .w3-input, .w3-select {
+    display: inline-block;
+    width: 55%;
+  }
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .checkbox-container label {
+    margin-right: 10px;
+  }
