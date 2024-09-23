@@ -24,7 +24,7 @@
       <div *ngIf="item.open" class="w3-hide w3-show">
         <a
           *ngFor="let sub of item.submenu"
-          class="w3-bar-item w3-button w3-margin-bottom"
+          class="w3-bar-item w3-button w3-margin-bottom w3-border-bottom"
           [routerLink]="sub.path"
           routerLinkActive="w3-blue"
         >
