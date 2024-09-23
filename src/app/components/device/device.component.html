@@ -1,14 +1,18 @@
 <div class="device-container">
-  <div class="w3-blue ">
+  <div class="w3-blue">
     <h1 class="w3-margin-left">Device</h1>
   </div>
-  <div class="w3-panel w3-pale-blue w3-leftbar w3-border-blue">
-    <p>London is the most populous city in the United Kingdom,
-    with a metropolitan area of over 9 million inhabitants.</p>
-  </div>
+  <p>Here you can find some information about your device status.</p>
+  <p class="w3-panel w3-border w3-leftbar w3-border-blue w3-padding-16">
+    Neo - Packaging Solutions : v0.43.1
+  </p>
   <div class="w3-row-padding w3-margin">
-    <div class="w3-col l4 m6 s12" *ngFor="let card of cardsData" style="padding: 10px;">
-      <app-card [data]="card"></app-card>
+    <div class="w3-col l4 m6 s12" *ngFor="let card of cardData">
+      <app-card
+        [title]="card.title"
+        [status]="card.status"
+        [data]="card.data"
+      ></app-card>
     </div>
   </div>
 </div>

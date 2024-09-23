@@ -9,22 +9,19 @@ import { Component, Input } from '@angular/core';
   styleUrl: './card.component.scss'
 })
 export class CardComponent {
-  @Input()
-  title!: string;
-  @Input() data: any;
 
-  getStatusClass(status: string): string {
-    switch (status.toLowerCase()) {
-      case 'active':
-        return 'status-active';
-      case 'configured':
-        return 'status-configured';
-      case 'connected':
-        return 'status-connected';
-      case 'disconnected':
-        return 'status-disconnected';
-      default:
-        return '';
-    }
+  @Input() title: string = '';
+  @Input() status: string | null = null; 
+  @Input() data: any;
+  objectKeys = Object.keys;
+
+  // Helper method to check if a value is an object
+  isObject(value: any): boolean {
+    return typeof value === 'object' && !Array.isArray(value);
+  }
+
+  // Helper method to check if a value is an array
+  isArray(value: any): boolean {
+    return Array.isArray(value);
   }
 }
