@@ -1,0 +1,33 @@
+.w3-card {
+    padding: 15px;
+  }
+  .config-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .config-item {
+    width: 18%; 
+  }
+  .w3-table td, .w3-table th {
+    padding: 8px 10px;
+  }
+  .w3-table th {
+    text-align: left;
+    background-color: #f1f1f1;
+  }
+  .w3-btn {
+    margin-top: 10px;
+  }
+  .w3-button {
+    margin-right: 8px;
+  }
+  .w3-label {
+    margin-bottom: 5px;
+    display: block;
+  }
+  .button-container {
+    display: flex;
+    align-items: center;
+  }

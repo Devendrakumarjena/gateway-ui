@@ -33,7 +33,13 @@
     <h3 class="w3-text-blue">MQTT Settings:</h3>
     <div class="w3-row-padding">
       <div class="w3-half">
-        <h4>Primary Server:</h4>
+        <div class="input-container">
+          <label class="w3-label">Primary Server:</label>
+          <label class="switch">
+            <input type="checkbox" checked />
+            <span class="slider round"></span>
+          </label>
+        </div>
         <div class="input-container">
           <label class="w3-label">Host:</label>
           <input
@@ -80,13 +86,22 @@
             value="Neo-A21"
           />
         </div>
-        <div class="checkbox-container">
-          <label for="tls-primary">TLS/SSL:</label>
-          <input class="w3-check" id="tls-primary" type="checkbox" checked />
+        <div class="input-container">
+          <label class="w3-label">TLS/SSL:</label>
+          <label class="switch">
+            <input type="checkbox" checked />
+            <span class="slider round"></span>
+          </label>
         </div>
       </div>
       <div class="w3-half">
-        <h4>Secondary Server:</h4>
+        <div class="input-container">
+          <label class="w3-label">Secondary Server :</label>
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+        </div>
         <div class="input-container">
           <label class="w3-label">Host:</label>
           <input
@@ -133,9 +148,12 @@
             value="Neo-A21"
           />
         </div>
-        <div class="checkbox-container">
-          <label for="tls-secondary">TLS/SSL:</label>
-          <input class="w3-check" id="tls-secondary" type="checkbox" />
+        <div class="input-container">
+          <label class="w3-label">TLS/SSL:</label>
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
         </div>
       </div>
     </div>

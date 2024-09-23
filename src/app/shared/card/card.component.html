@@ -1,27 +1,40 @@
-<!-- <div class="w3-card">
-  <div class="w3-container">
-    <div class="w3-bar">
-      <p class=" w3-left">{{ data.title }}</p>
-      <button class="w3-button w3-right" [ngClass]="getStatusClass(data.status)">{{ data.status }}</button>
+<div class="w3-card w3-margin w3-padding w3-border w3-round w3-round-large" 
+    [ngClass]="{
+        'w3-border-red': status === 'inactive', 
+        'w3-border-green': status === 'active', 
+        'w3-border-yellow': status === 'configured'
+    }" style="font-size: 12px;">
+    
+    <h3 class="w3-text-blue">{{ title }} 
+        <span class="w3-tag w3-round w3-right"  style="font-size: 14px;"
+              [ngClass]="{
+                'w3-green': status === 'active', 
+                'w3-red': status === 'inactive', 
+                'w3-yellow': status === 'configured'
+              }">
+            {{ status }}
+        </span>
+    </h3>
+<hr>
+    <div class="w3-margin-top" *ngFor="let key of objectKeys(data)">
+        <div *ngIf="!isObject(data[key]) && !isArray(data[key])">
+            <label class="w3-text-grey" style="font-size: 12px;">{{ key | titlecase }}:</label> {{ data[key] }}
+        </div>
+        <div *ngIf="isObject(data[key])">
+            <label class="w3-text-grey" style="font-size: 12px;">{{ key | titlecase }}:</label>
+            <div class="w3-margin-left" style="font-size: 12px;">
+                <app-card *ngFor="let subkey of objectKeys(data[key])" 
+                          [title]="subkey" 
+                          [data]="data[key][subkey]">
+                </app-card>
+            </div>
+        </div>
+        <div *ngIf="isArray(data[key])">
+            <label class="w3-text-grey" style="font-size: 12px;">{{ key | titlecase }}:</label>
+            <ul class="w3-ul w3-margin-left" style="font-size: 12px;">
+                <li *ngFor="let item of data[key]">{{ item }}</li>
+            </ul>
+        </div>
     </div>
-    <hr>
-    <p class="card-content">{{ data.content }}</p>
-    <div class="status-details">{{ data.details }}</div>
-  </div>
-</div> -->
-
-<div class="w3-panel w3-border w3-round-large">
-  <div style="display: flex;justify-content:space-between;justify-items: center; padding: 10px;">
-    <p class="w3-medium"  >{{ data.title }}</p>
-
-    <button class="w3-button w3-padding-small" style="font-weight: bold;color: #f7f0f0;" [ngClass]="getStatusClass(data.status)">{{ data.status }}</button>
-  </div>
-  
-  <hr>
-  <p>Chip ID : a2e491</p>
-  <p>Chip ID : a2e491</p>
-  <p>Chip ID : a2e491</p>
-  <p>Chip ID : a2e491</p>
-  <p>Chip ID : a2e491</p>
 </div>
 
