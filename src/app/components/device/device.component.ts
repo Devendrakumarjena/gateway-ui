@@ -55,7 +55,6 @@ export class DeviceComponent {
     }
   };
 
-  // Transforming the JSON into an array to loop over in the template
   jsonSections = [
     { title: 'System', data: this.jsonData.system },
     { title: 'Memory', data: this.jsonData.memory,  memoryUsage: {
@@ -67,32 +66,32 @@ export class DeviceComponent {
     { title: 'Access Point', status: this.jsonData.interfaces.accesspoint.status, data: this.jsonData.interfaces.accesspoint },
     { title: 'Bluetooth', status: this.jsonData.interfaces.bluetooth.status, data: this.jsonData.interfaces.bluetooth }
   ];
-  // Create a structured array to loop through the app-cards
+  
   cardData = [
     {
       title: 'System',
       data: this.jsonData.system,
-      status: null // No status for system
+      status: null 
     },
     {
       title: 'Memory',
       data: this.jsonData.memory,
-      status: null // No status for memory
+      status: null 
     },
     {
       title: 'Provisioning',
       data: this.jsonData.provision,
-      status: this.jsonData.provision.status // Status for provisioning
+      status: this.jsonData.provision.status 
     },
     {
       title: 'Access Point',
       data: this.jsonData.interfaces.accesspoint,
-      status: this.jsonData.interfaces.accesspoint.status // Status for Access Point
+      status: this.jsonData.interfaces.accesspoint.status 
     },
     {
       title: 'Bluetooth',
       data: this.jsonData.interfaces.bluetooth,
-      status: this.jsonData.interfaces.bluetooth.status // Status for Bluetooth
+      status: this.jsonData.interfaces.bluetooth.status 
     }
   ];
   
