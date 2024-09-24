@@ -16,32 +16,19 @@ export class SidebarComponent {
     { path: '/application', label: 'Application', icon: 'zmdi zmdi-airplay zmdi-hc-lg' },
     {
       label: 'Modules', 
+      icon: 'zmdi zmdi-view-module zmdi-hc-lg',
       open: false, 
       submenu: [
-        { path: '/rs232', label: 'RS232', icon: 'zmdi zmdi-reader' },  // Add icons for submenu
+        { path: '/rs232', label: 'RS232', icon: 'zmdi zmdi-reader' },
         { path: '/rs485', label: 'RS485', icon: 'zmdi zmdi-device-hub' },
         { path: '/can', label: 'CAN', icon: 'zmdi zmdi-car' },
         { path: '/io', label: 'IO', icon: 'zmdi zmdi-input-antenna' },
         { path: '/cloud', label: 'Cloud', icon: 'zmdi zmdi-input-antenna' }
       ]
     },
-    // {
-    //   label: 'Wireless', 
-    //   open: false, 
-    //   submenu: [
-    //     { path: '/wifi', label: 'Wi-Fi', icon: 'zmdi zmdi-wifi' },
-    //     { path: '/bluetooth', label: 'Bluetooth', icon: 'zmdi zmdi-bluetooth' }
-    //   ]
-    // },
-    // {
-    //   label: 'Cloud', 
-    //   open: false, 
-    //   submenu: [
-    //     { path: '/Hardware', label: 'Hardware', icon: 'zmdi zmdi-cloud' }
-    //   ]
-    // },
     {
       label: 'Setting', 
+      icon: 'zmdi zmdi-settings zmdi-hc-lg',
       open: false, 
       submenu: [
         { path: '/Interface', label: 'Interface', icon: 'zmdi zmdi-memory zmdi-hc-lg' },
