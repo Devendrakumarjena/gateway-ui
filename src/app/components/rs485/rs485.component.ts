@@ -146,16 +146,26 @@ export class RS485Component implements OnInit {
     const actionCell = newRow.insertCell();
     actionCell.style.width = cellWidth;
     const actionButton = document.createElement('button');
-    actionButton.textContent = isFromAPI ? 'Remove' : 'Add'; // "Remove" for API rows, "Add" for new rows
+    actionButton.textContent = isFromAPI ? '-' : '+'; // "Remove" for API rows, "Add" for new rows
+    Object.assign(actionButton.style, {
+      height: '25px',
+      width: '25px', // Fixed width for the button
+      backgroundColor: '#2196F3', // Background color for the button
+      color: '#fff',
+      fontSize: '15px',
+      border: 'none',
+      borderRadius: '5px'
+    });
+
     actionButton.onclick = () => {
-      if (actionButton.textContent === 'Add') {
-        actionButton.textContent = 'Remove';
+      if (actionButton.textContent === '+') {
+        actionButton.textContent = '-';
         this.addRow(); // Add new empty row with an "Add" button
       } else {
         table.deleteRow(newRow.rowIndex); // Remove the current row
         console.log(newRow);
         this.removeRowFromAttributeArray(0);
-      }    
+      }
     };
     actionButton.addEventListener('click', function () {
 
