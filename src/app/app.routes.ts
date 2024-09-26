@@ -6,6 +6,8 @@ import { CloudComponent } from './components/cloud/cloud.component';
 import { RS232Component } from './components/rs232/rs232.component';
 import { IOComponent } from './components/io/io.component';
 import { RS485Component } from './components/rs485/rs485.component';
+import { InterfaceComponent } from './components/interface/interface.component';
+import { WIRELESSComponent } from './components/wireless/wireless.component';
 
 export const routes: Routes = [
   { path: 'device', component: DeviceComponent,data: { title: 'Device' } },
@@ -15,9 +17,9 @@ export const routes: Routes = [
   { path: 'RS232', component: RS232Component,data: { title: 'RS232' }  },
   { path: 'io', component: IOComponent,data: { title: 'IO' }  },
   { path: 'rs485', component: RS485Component,data: { title: 'RS485' }  },
-  // { path: 'modules', component: ModulesComponent },
-  // { path: 'modules', component: ModulesComponent },
-  // { path: 'rs232', component: ModulesComponent },
+  { path: 'Interface', component: InterfaceComponent,data: { title: 'INTERFACES' }  },
+  { path: 'wireless', component: WIRELESSComponent,data: { title: 'WIRELESS' }  },
+  { path: 'logs', component: WIRELESSComponent,data: { title: 'LOGS' }  },
   { path: '', redirectTo: '/device', pathMatch: 'full' }, // Default route
   { path: '**', redirectTo: '/device' },
 ];

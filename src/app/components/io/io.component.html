@@ -1,2 +1,21 @@
 <app-header [header]="title"></app-header>
 
+<div class="chat-container">
+    <!-- Connection status -->
+    <div *ngIf="!isConnected" class="alert alert-danger">
+      WebSocket connection lost. <button (click)="reconnect()">Reconnect</button>
+    </div>
+  
+    <div class="messages" *ngIf="isConnected">
+      <h4>Messages:</h4>
+      <ul>
+        <li *ngFor="let message of messages">{{ message }}</li>
+      </ul>
+    </div>
+  
+    <div class="message-input" *ngIf="isConnected">
+      <input [(ngModel)]="inputMessage" placeholder="Type a message" />
+      <button (click)="sendMessage()">Send</button>
+    </div>
+  </div>
+  
