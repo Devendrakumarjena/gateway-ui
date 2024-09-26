@@ -1,6 +1,5 @@
 <app-header [header]="title"></app-header>
 <div class="w3-container w3-margin">
-
   <div class="w3-card w3-margin-top">
     <h4>Here you can find all the RS232 Module configurations.</h4>
     <h3 class="w3-text-blue">Configuration :</h3>
@@ -40,61 +39,13 @@
       </div>
     </div>
   </div>
-
   <div class="w3-card w3-margin-top">
     <h3 class="w3-text-blue">Attribute Configuration :</h3>
-    <table class="w3-table w3-bordered w3-margin-top w3-border">
-      <thead>
-        <tr>
-          <th>Attribute</th>
-          <th>Data Type</th>
-          <th>Default</th>
-          <th>Request</th>
-          <th>Expression</th>
-          <th>Data</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Temperature</td>
-          <td>
-            <select class="w3-select w3-border w3-round">
-              <option value="INT">INT</option>
-            </select>
-          </td>
-          <td><input class="w3-input w3-border w3-round-large w3-round" type="text" value="0" /></td>
-          <td><input  class="w3-input w3-border w3-round-large w3-round" type="text" /></td>
-          <td>
-            <input class="w3-input w3-border w3-round-large w3-round" type="text" value="[e2~]" />
-          </td>
-          <td><input class="w3-input w3-border w3-round-large w3-round" type="text" value="23" /></td>
-          <td>
-            <button class="w3-button w3-blue  w3-round"><i class="zmdi zmdi-plus"></i></button>
-            <button class="w3-button w3-blue  w3-round"><i class="zmdi zmdi-minus"></i></button>
-          </td>
-        </tr>
-        <tr>
-          <td>Humidity</td>
-          <td>
-            <select class="w3-select w3-border w3-round">
-              <option value="Float">Float</option>
-            </select>
-          </td>
-          <td><input class="w3-input w3-border w3-round-large w3-round" type="text" value="0.0" /></td>
-          <td><input class="w3-input w3-border w3-round-large w3-round" type="text" /></td>
-          <td>
-            <input  class="w3-input w3-border w3-round-large w3-round" type="text" value="[e3~]" />
-          </td>
-          <td>
-            <input class="w3-input w3-border w3-round-large w3-round" type="text" value="122.66" />
-          </td>
-          <td>
-            <button class="w3-button w3-blue w3-round"><i class="zmdi zmdi-plus"></i></button>
-            <button class="w3-button w3-blue w3-round"><i class="zmdi zmdi-minus"></i></button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <app-common-table
+      [tableData]="tableData"
+      [columnsConfig]="columnsConfig"
+      (rowAdded)="onRowAdded($event)"
+      (rowRemoved)="onRowRemoved($event)"
+    ></app-common-table>
   </div>
 </div>
