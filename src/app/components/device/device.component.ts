@@ -1,15 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CardComponent } from "../../shared/card/card.component";
 import { CommonModule } from '@angular/common';
+import { HeaderComponent } from "../../shared/header/header.component";
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-device',
   standalone: true,
-  imports: [CommonModule,CardComponent],
+  imports: [CommonModule, CardComponent, HeaderComponent],
   templateUrl: './device.component.html',
   styleUrl: './device.component.scss'
 })
-export class DeviceComponent {
+export class DeviceComponent implements OnInit{
+
+
+  title: string = '';
+
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    this.route.data.subscribe((data: any) => {
+      this.title = data.title;
+    });
+  }
+
+
    // Your JSON data
    jsonData = {
     system: {
