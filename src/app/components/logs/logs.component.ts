@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from "../../shared/header/header.component";
 import { ActivatedRoute } from '@angular/router';
-import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
 
 @Component({
@@ -24,13 +24,22 @@ export class LogsComponent implements OnInit{
     { fileName: 'servicelog-2022-12-12 16:45:32.log' }
   ];
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute,private fb: FormBuilder) {}
 
   ngOnInit(): void {
     this.route.data.subscribe((data: any) => {
       this.title = data.title;
     });
-    this.logFiles;
+
+    this.logSettingData();
+      
+  }
+
+  logSettingData(){
+    this.logSettingsForm = this.fb.group({
+      primaryServer: [""], 
+      logMaxSize: [""], 
+    });
   }
 
   downloadLog(log: any) {
