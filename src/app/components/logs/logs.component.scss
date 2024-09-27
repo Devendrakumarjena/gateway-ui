@@ -1,0 +1,15 @@
+@import "../cloud/cloud.component.scss";
+.w3-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.w3-col {
+    margin-right: 10px; 
+}
+
+.w3-right-align {
+    display: flex;
+    justify-content: flex-end;
+}

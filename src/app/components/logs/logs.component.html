@@ -1,1 +1,66 @@
 <app-header [header]="title"></app-header>
+<div class="w3-container w3-padding">  
+    <div class="w3-card-4 w3-padding w3-margin-bottom">
+        <p>Here you can find all the logs.</p>
+      <h4 class="w3-text-grey">Log Settings</h4>
+  
+      <form [formGroup]="logSettingsForm" (ngSubmit)=" saveSettings()">
+        <div class="w3-row">
+          <div class="w3-col l3 m3 s12">
+            <div class="input-container">
+              <label class="w3-label">Primary Server:</label>
+              <label class="switch">
+                <input type="checkbox" formControlName="primaryServer" />
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </div>
+      
+          <div class="w3-col l3 m3 s12">
+            <label for="logMaxSize">Log Max Size:</label>
+            <select id="logMaxSize" class="w3-select" formControlName="logMaxSize">
+              <option value="1">1 MB</option>
+              <option value="2">2 MB</option>
+              <option value="5">5 MB</option>
+            </select>
+          </div>
+      
+          <div class="w3-col l3 m3 s12 w3-right-align">
+            <button class="w3-button w3-blue w3-margin-right" type="submit">Save</button>
+            <button class="w3-button w3-gray" type="button">Cancel</button>
+          </div>
+        </div>
+      </form>
+      
+    
+    </div>
+  
+    <!-- Logs List -->
+    <div class="w3-card-4 w3-padding">
+      <table class="w3-table-all w3-hoverable">
+        <thead>
+          <tr class="w3-light-grey">
+            <th>Log File Name</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Loop through logFiles array and display each log -->
+          <tr *ngFor="let log of logFiles">
+            <td>{{ log.fileName }}</td>
+            <td>
+              <!-- Material Design Iconic Font for Download with margin between buttons -->
+              <button class="w3-button w3-green w3-round w3-margin-right" (click)="downloadLog(log)">
+                <i class="zmdi zmdi-download"></i>
+              </button>
+              <!-- Material Design Iconic Font for Delete with margin -->
+              <button class="w3-button w3-red w3-round" (click)="deleteLog(log)">
+                <i class="zmdi zmdi-delete"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
