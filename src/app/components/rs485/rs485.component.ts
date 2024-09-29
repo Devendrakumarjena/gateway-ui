@@ -162,9 +162,9 @@ export class RS485Component implements OnInit {
         actionButton.textContent = '-';
         this.addRow(); // Add new empty row with an "Add" button
       } else {
-        table.deleteRow(newRow.rowIndex); // Remove the current row
+        table.deleteRow(newRow.rowIndex - 1); // Remove the current row
         console.log(newRow);
-        this.removeRowFromAttributeArray(0);
+        this.removeRowFromAttributeArray(newRow.rowIndex - 1);
       }
     };
     actionButton.addEventListener('click', function () {
