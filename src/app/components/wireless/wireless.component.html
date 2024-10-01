@@ -1,1 +1,97 @@
 <app-header [header]="title"></app-header>
+<div class="w3-container">  
+    <div class="wifi-settings">
+        
+        <!-- Container for Wifi Module, Scan Network, and Buttons in the same row -->
+        <div class="actions-row">
+          <div class="left-section">
+            <div class="wifi-module-settings">
+              <label for="wifi-module">Wifi Module:</label>
+              <label class="switch">
+                <input type="checkbox" id="wifi-module">
+                <span class="slider"></span>
+              </label>
+            </div>
+      
+            <div class="scan-network">
+              <button class="w3-button w3-border w3-round w3-light-grey">
+                <i class="zmdi zmdi-wifi zmdi-hc-fw"></i> Scan Network
+              </button>
+            </div>
+          </div>
+      
+          <div class="button-group">
+            <button class="w3-button w3-border w3-round w3-light-grey">Save</button>
+            <button class="w3-button w3-border w3-round w3-light-grey">Cancel</button>
+          </div>
+        </div>
+      
+        <!-- Container for Status and MAC Address in the same row -->
+        <div class="status-row">
+          <div class="status">
+            <span class="w3-text-red">Status: DISCONNECTED</span>
+          </div>
+          <div class="mac-address">
+            MAC Address: 84:d0:8e:cd:54:98
+          </div>
+        </div>
+      </div>
+      
+      
+    <div class="w3-responsive w3-padding">
+      <table class="w3-table w3-bordered w3-striped">
+        <thead>
+          <tr>
+            <th>SSID</th>
+            <th>Password</th>
+            <th>Encryption</th>
+            <th>IP Mode</th>
+            <th>IP Address</th>
+            <th>Subnet</th>
+            <th>Gateway</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let network of wifiNetworks">
+            <td>{{ network.ssid }}</td>
+            <td>{{ network.password }}</td>
+            <td>{{ network.encryption }}</td>
+            <td>{{ network.ipMode }}</td>
+            <td>{{ network.ipAddress }}</td>
+            <td>{{ network.subnet }}</td>
+            <td>{{ network.gateway }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <!-- Access Point Settings -->
+    <div class="access-point-settings w3-padding">
+        <h4>Access Point Settings:</h4>
+        <div class="row">
+          <div class="column">
+            <label for="ap-ssid">SSID:</label>
+            <input type="text" id="ap-ssid" class="w3-input w3-border" value="Neo2.4e91">
+          </div>
+          <div class="column">
+            <label for="ap-password">Password:</label>
+            <input type="password" id="ap-password" class="w3-input w3-border" value="********">
+          </div>
+          <div class="column">
+            <label for="ap-subnet">Subnet:</label>
+            <input type="text" id="ap-subnet" class="w3-input w3-border" value="255.255.255.0">
+          </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label for="dns1">DNS 1:</label>
+                <input type="text" id="dns1" class="w3-input w3-border" value="8.8.8.8">
+            </div>
+            <div class="column">
+                <label for="dns2">DNS 2:</label>
+                <input type="text" id="dns2" class="w3-input w3-border" value="8.8.8.8">
+            </div>
+        </div>
+      </div>
+    </div>
+  
