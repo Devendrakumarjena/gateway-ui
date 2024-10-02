@@ -1,37 +1,58 @@
 <app-header [header]="title"></app-header>
 <div class="w3-container w3-padding">
-    <h2>Here you can find all the Modem and Wired configurations.</h2>
-    <div class="w3-display-container w3-light-grey w3-padding-large">
-      <div class="w3-display-topright">
-        <button class="w3-button w3-light-grey w3-border" (click)="saveSettings()">Save</button>
-        <button class="w3-button w3-light-grey w3-border" (click)="cancelSettings()">Cancel</button>
+  <div class="w3-row w3-card-4 w3-margin w3-round-large">
+    <!-- <header class="w3-container w3-light-grey"> -->
+      <h5 class="w3-padding">Here you can find all the Modem and Wired configurations.</h5>
+    <!-- </header> -->
+    <div class="w3-container">
+      <div class="w3-display-container w3-padding-large">
+        <div class="w3-row">
+          <button class="w3-button w3-light-grey w3-border" (click)="saveSettings()">Save</button>
+          <button class="w3-button w3-light-grey w3-border" (click)="cancelSettings()">Cancel</button>
+        </div>
       </div>
     </div>
-  
-    <form [formGroup]="networkConfigForm" class="w3-row-padding">
-      <!-- Modem Settings -->
-      <div class="w3-col m6">
-        <div class="w3-card-4 w3-padding w3-border w3-round-large">
-          <h4>Modem Settings:</h4>
-  
+  </div>
+
+  <form [formGroup]="networkConfigForm" class="w3-row-padding">
+    <!-- Modem Settings -->
+    <div class="w3-col m6">
+      <div class="w3-card-4 w3-padding w3-border w3-round-large">
+        <h4>Modem Settings:</h4>
+        <div formGroupName="modem">
           <!-- GSM Module Toggle -->
-          <label for="gsm-module">GSM Module:</label>
-          <label class="switch">
-            <input type="checkbox" id="gsm-module" formControlName="gsmModule">
-            <span class="slider"></span>
-          </label>
-  
-          <!-- Status and Provider Info -->
-          <p>
-            Status:
-            <span [ngClass]="{'w3-text-red': !networkConfigForm.get('modem.status')?.value, 'w3-text-green': networkConfigForm.get('modem.status')?.value}">
+          <div class="w3-row">
+            <label for="gsm-module">GSM Module:</label>
+            <div class="switch">
+              <input type="checkbox" id="gsm-module" formControlName="gsmModule">
+              <span class="slider"></span>
+            </div>
+          </div>
+
+          <div class="w3-row">
+            <!-- Status and Provider Info -->
+            <label for="status">Status: </label>
+            <div
+              [ngClass]="{'w3-text-red': !networkConfigForm.get('modem.status')?.value, 'w3-text-green': networkConfigForm.get('modem.status')?.value}">
               {{ networkConfigForm.get('modem.status')?.value ? 'CONNECTED' : 'DISCONNECTED' }}
-            </span><br>
-            Provider: <b>{{ networkConfigForm.get('modem.provider')?.value }}</b><br>
-            Network: <span>{{ networkConfigForm.get('modem.network')?.value }}</span><br>
-            IMEI: <span>{{ networkConfigForm.get('modem.imei')?.value }}</span>
-          </p>
-  
+            </div>
+          </div>
+
+          <div class="w3-row">
+            <label for="provider">Provider: </label>
+            <div>{{ networkConfigForm.get('modem.provider')?.value }}</div>
+          </div>
+
+          <div class="w3-row">
+            <label for="provider">Network: </label>
+            <div>{{ networkConfigForm.get('modem.network')?.value }}</div>
+          </div>
+
+          <div class="w3-row">
+            <label for="provider">IMEI: </label>
+            <div>{{ networkConfigForm.get('modem.imei')?.value }}</div>
+          </div>
+
           <!-- Simcard Information -->
           <div class="w3-border w3-padding w3-round-large">
             <p>
@@ -44,81 +65,90 @@
               mnc: {{ networkConfigForm.get('modem.simcard.mnc')?.value }}
             </p>
           </div>
-  
+
           <!-- IP Settings -->
           <h5>IP Settings:</h5>
-          <label>Mode:</label>
-          <select formControlName="GSMmode" formGroupName="ipSettings" class="w3-select w3-border">
-            <option value="DHCP">DHCP</option>
-            <option value="Static">Static</option>
-          </select>
-  
-          <label>IP Address:</label>
-          <input type="text" class="w3-input w3-border" formControlName="ipAddress">
-  
-          <label>Subnet:</label>
-          <input type="text" class="w3-input w3-border" formControlName="subnet">
-  
-          <label>Gateway:</label>
-          <input type="text" class="w3-input w3-border" formControlName="gateway">
-  
-          <label>DNS:</label>
-          <input type="text" class="w3-input w3-border" formControlName="dns">
+          <div formGroupName="ipSettings">
+            <label>Mode:</label>
+            <select formControlName="GSMmode" class="w3-select w3-border">
+              <option value="DHCP">DHCP</option>
+              <option value="Static">Static</option>
+            </select>
+
+            <label>IP Address:</label>
+            <input type="text" class="w3-input w3-border" formControlName="ipAddress">
+
+            <label>Subnet:</label>
+            <input type="text" class="w3-input w3-border" formControlName="subnet">
+
+            <label>Gateway:</label>
+            <input type="text" class="w3-input w3-border" formControlName="gateway">
+
+            <label>DNS:</label>
+            <input type="text" class="w3-input w3-border" formControlName="dns">
+          </div>
         </div>
+
       </div>
-  
-      <!-- Wired Settings -->
-      <div class="w3-col m6">
-        <div class="w3-card-4 w3-padding w3-border w3-round-large">
-          <h4>Wired Settings:</h4>
-  
+    </div>
+
+    <!-- Wired Settings -->
+    <div class="w3-col m6">
+      <div class="w3-card-4 w3-padding w3-border w3-round-large">
+        <h4>Wired Settings:</h4>
+        <div formGroupName="wired">
           <!-- Ethernet Module Toggle -->
           <label for="ethernet-module">Ethernet Module:</label>
           <label class="switch">
             <input type="checkbox" id="ethernet-module" formControlName="ethernetModule">
             <span class="slider"></span>
           </label>
-  
+
           <!-- Status and MAC Address Info -->
           <p>
             Status:
-            <span [ngClass]="{'w3-text-red': !networkConfigForm.get('wired.status')?.value, 'w3-text-green': networkConfigForm.get('wired.status')?.value}">
+            <span
+              [ngClass]="{'w3-text-red': !networkConfigForm.get('wired.status')?.value, 'w3-text-green': networkConfigForm.get('wired.status')?.value}">
               {{ networkConfigForm.get('wired.status')?.value ? 'CONNECTED' : 'DISCONNECTED' }}
             </span><br>
             MAC Address: <b>{{ networkConfigForm.get('wired.macAddress')?.value }}</b><br>
             Hostname: <input type="text" class="w3-input w3-border" formControlName="hostname">
           </p>
-  
+
           <!-- IP Settings -->
           <h5>IP Settings:</h5>
-          <label>Mode:</label>
-          <select formControlName="wiredmode" class="w3-select w3-border">
-            <option value="DHCP">DHCP</option>
-            <option value="Static">Static</option>
-          </select>
-  
-          <label>IP Address:</label>
-          <input type="text" class="w3-input w3-border" formControlName="ipAddress">
-  
-          <label>Subnet:</label>
-          <input type="text" class="w3-input w3-border" formControlName="subnet">
-  
-          <label>Gateway:</label>
-          <input type="text" class="w3-input w3-border" formControlName="gateway">
-  
-          <label>DNS:</label>
-          <input type="text" class="w3-input w3-border" formControlName="dns">
-  
+          <div formGroupName="ipSettings">
+            <label>Mode:</label>
+            <select formControlName="wiredmode" class="w3-select w3-border">
+              <option value="DHCP">DHCP</option>
+              <option value="Static">Static</option>
+            </select>
+
+            <label>IP Address:</label>
+            <input type="text" class="w3-input w3-border" formControlName="ipAddress">
+
+            <label>Subnet:</label>
+            <input type="text" class="w3-input w3-border" formControlName="subnet">
+
+            <label>Gateway:</label>
+            <input type="text" class="w3-input w3-border" formControlName="gateway">
+
+            <label>DNS:</label>
+            <input type="text" class="w3-input w3-border" formControlName="dns">
+          </div>
+
           <!-- Internet Gateway Settings -->
           <h5>Internet Gateway Settings:</h5>
-          <label>Host:</label>
-          <input type="text" class="w3-input w3-border" formControlName="host">
-  
-          <label>Port:</label>
-          <input type="text" class="w3-input w3-border" formControlName="port">
+          <div formGroupName="internetGateway">
+            <label>Host:</label>
+            <input type="text" class="w3-input w3-border" formControlName="host">
+
+            <label>Port:</label>
+            <input type="text" class="w3-input w3-border" formControlName="port">
+
+          </div>
         </div>
       </div>
-    </form>
-  </div>
-  
-  
+    </div>
+  </form>
+</div>

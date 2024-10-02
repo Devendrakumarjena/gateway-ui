@@ -22,11 +22,11 @@ export class InterfaceComponent implements OnInit {
     });
     this.initializeForm();
   }
- 
+
   initializeForm() {
     this.networkConfigForm = this.fb.group({
       modem: this.fb.group({
-        gsmModule: [false],
+        gsmModule: ['true'],
         status: [false],
         provider: ['JIO4G'],
         network: ['Searching; N/A; No Service'],
@@ -75,5 +75,5 @@ export class InterfaceComponent implements OnInit {
   cancelSettings() {
     this.networkConfigForm.reset();
   }
-  
+
 }
